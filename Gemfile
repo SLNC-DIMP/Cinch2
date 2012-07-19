@@ -43,10 +43,14 @@ gem 'jquery-rails', '2.0.0'
 gem 'amqp', '0.8.0'
 # curl integration
 gem 'curb', '0.8.1'
-# web crawling intergration
+# web crawling integration
 gem 'anemone', '0.7.2'
-#NLP integration
-gem 'treat', '1.1.0'
+# NLP integration
+# gem 'treat', '1.1.0'
+# user authentication
+# gem 'devise', '2.1.0'
+# Nice default styling
+gem 'twitter-bootstrap-rails', '~> 2.1.0'
 
 group :test do
   gem 'capybara', '1.1.2'
