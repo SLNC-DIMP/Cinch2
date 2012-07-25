@@ -2,13 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.0'
 end
 
+gem 'annotate', '~> 2.4.1.beta', group: :development
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,7 +24,7 @@ end
 gem 'jquery-rails', '2.0.0'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -41,16 +40,30 @@ gem 'jquery-rails', '2.0.0'
 
 # rabbitmq integration
 gem 'amqp', '0.8.0'
+
 # curl integration
 gem 'curb', '0.8.1'
+
 # web crawling integration
 gem 'anemone', '0.7.2'
+
 # NLP integration
 # gem 'treat', '1.1.0'
+
 # user authentication
-# gem 'devise', '2.1.0'
+gem 'devise', '2.1.0'
+
+# user roles
+gem 'cancan', '1.6.8'
+
+# admin
+gem 'rails_admin', '0.0.5'
+
 # Nice default styling
 gem 'twitter-bootstrap-rails', '~> 2.1.0'
+
+# pagination
+gem 'kaminari', '0.13.0'
 
 group :test do
   gem 'capybara', '1.1.2'
