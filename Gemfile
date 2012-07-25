@@ -48,7 +48,7 @@ gem 'curb', '0.8.1'
 gem 'anemone', '0.7.2'
 
 # NLP integration
-# gem 'treat', '1.1.0'
+gem 'treat', '1.1.2'
 
 # user authentication
 gem 'devise', '2.1.0'
