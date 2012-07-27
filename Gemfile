@@ -17,7 +17,8 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  # Nice default styling
+  gem 'twitter-bootstrap-rails', '~> 2.1.0'
   gem 'uglifier', '1.2.3'
 end
 
@@ -38,8 +39,10 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # To use debugger
 # gem 'debugger'
 
-# rabbitmq integration
-gem 'amqp', '0.8.0'
+# parallel processing and background tasks
+# gem 'amqp', '0.8.0'
+gem 'parallel'
+gem 'delayed_job_active_record', '~> 0.3.0'
 
 # curl integration
 gem 'curb', '0.8.1'
@@ -50,6 +53,9 @@ gem 'anemone', '0.7.2'
 # NLP integration
 gem 'treat', '1.1.2'
 
+# data auditing
+gem 'paper_trail'
+
 # user authentication
 gem 'devise', '2.1.0'
 
@@ -59,11 +65,11 @@ gem 'cancan', '1.6.8'
 # admin
 gem 'rails_admin', '0.0.5'
 
-# Nice default styling
-gem 'twitter-bootstrap-rails', '~> 2.1.0'
-
 # pagination
 gem 'kaminari', '0.13.0'
+
+# breadcrumbs
+gem 'crummy', "~> 1.6.0"
 
 group :test do
   gem 'capybara', '1.1.2'
