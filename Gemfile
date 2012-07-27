@@ -3,11 +3,13 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.6'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.0'
 end
 
-gem 'annotate', '~> 2.4.1.beta', group: :development
+group :development do
+  gem 'annotate', '~> 2.4.1.beta'
+  gem 'mysql2', '~> 0.3.10'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -73,8 +75,9 @@ gem 'crummy', "~> 1.6.0"
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'sqlite3', '1.3.6'
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'mysql2', '~> 0.3.10'
 end
