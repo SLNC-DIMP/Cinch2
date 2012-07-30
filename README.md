@@ -45,11 +45,12 @@ Requirements
 
 * Currently Cinch2 will only run on *nix systems
 * Ruby 1.9.2+
-* Rails 3.2.* (We use 3.2.6)
+* Rails 3.2.* (We use 3.2.7)
 * MySQL or SQLite3
 * ClamAV
-* ImageMagick
+* ImageMagick   6.3.5+
 * Ghostscript
+* libcurl 7.5+
 
 Recommended, but not required:
 

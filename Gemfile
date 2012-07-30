@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
+  gem "fakefs", :require => "fakefs/safe"
 end
 
 group :development do
@@ -72,6 +73,12 @@ gem 'kaminari', '0.13.0'
 
 # breadcrumbs
 gem 'crummy', "~> 1.6.0"
+
+# convert files to PDF/a
+gem 'rghost', "~> 0.8.7.8"
+
+# convert images to JPEG2000
+#gem 'rmagick', "2.13.1"
 
 group :test do
   gem 'capybara', '1.1.2'
