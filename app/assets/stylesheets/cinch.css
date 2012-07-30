@@ -2,6 +2,15 @@ body {
 background: none repeat scroll 0 0 #EBF7F9;
 }
 
+h1 {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+h1 form {
+    margin-left: 45%
+}
+
 #mainwrap {
 	margin: 2% 10%;
 	padding: 2%;
