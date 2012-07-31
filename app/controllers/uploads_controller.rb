@@ -5,5 +5,6 @@ class UploadsController < ApplicationController
   end
   
   def upload
+
   end
 end

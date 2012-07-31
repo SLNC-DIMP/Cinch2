@@ -7,10 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "Cinch2", root_path, class: "brand" %>
+      <div class="container nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "About the Tool", about_path  %></li>
+          <li><%= link_to "About the Project", project_path  %></li>
+          <li><%= link_to "FAQ", faq_path  %></li>
+          <li><%= link_to "Contact", contact_path  %></li>
+          <li><%= link_to "Login", '#'  %></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
 <div id="mainwrap">
 <%= yield %>
 <div id="foot">
-  <p>footer</p>
+  <ul>
+    <li><%= link_to image_tag("footerncdcr75.png", alt: "NCDCR Logo"), "http://ncdcr.gov" %></li>
+    <li><%= link_to image_tag("footerslnc75.png", alt: "SLNC Logo"), "http://statelibrary.ncdcr.gov" %></li>
+    <li><%= link_to image_tag("footernclive75.png", alt: "NCLIVE Logo"), "http://nclive.org" %></li>
+    <li><%= link_to image_tag("IMLS_Logo.png", alt: "IMLS Logo"), "http://www.imls.gov" %></li>
+  </ul>
 </div>
 </div>
 </body>

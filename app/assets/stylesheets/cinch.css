@@ -2,13 +2,13 @@ body {
 background: none repeat scroll 0 0 #EBF7F9;
 }
 
-h1 {
+h1, h1+p {
     text-align: center;
     padding-bottom: 10px
 }
 
-h1 form {
-    margin-left: 45%
+#upload_form {
+    margin-left: 35%
 }
 
 #mainwrap {
@@ -49,6 +49,14 @@ list-style-type:none;
 }
 
 #foot {
-	margin: 20% 10% 1% 10%;
-	text-align: center
+    border-top: 1px solid #ccc;
+	margin: 20% 5% 1% 5%;
+}
+
+#foot ul {
+    list-style-type: none;
+}
+
+#foot ul li {
+    display: inline;
 }
