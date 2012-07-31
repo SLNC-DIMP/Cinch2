@@ -46,6 +46,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'amqp', '0.8.0'
 gem 'parallel'
 gem 'delayed_job_active_record', '~> 0.3.0'
+# gem 'sidekiq'
 
 # curl integration
 gem 'curb', '0.8.1'
@@ -73,6 +74,9 @@ gem 'kaminari', '0.13.0'
 
 # breadcrumbs
 gem 'crummy', "~> 1.6.0"
+
+# zip creation
+gem 'rubyzip'
 
 # convert files to PDF/a
 gem 'rghost', "~> 0.8.7.8"

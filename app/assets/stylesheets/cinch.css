@@ -36,6 +36,10 @@ position:relative;
 padding-left: 15px;
 }
 
+#about {
+    margin-bottom: 175px;
+}
+
 label { font-weight: bold; display: inline;}
 
 #cinch_text {
@@ -46,6 +50,9 @@ padding-top: 10px;
 list-style-type:none;
 }
 
+form {
+    background-color: #fff;
+}
 #upload_form {
     border: 2px solid #ccc;
     padding: 2%;
@@ -58,7 +65,7 @@ list-style-type:none;
 
 #foot {
     border-top: 1px solid #ccc;
-	margin: 15% 5% 1% 5%;
+	margin: 3% 5% 1% 5%;
 }
 
 #foot ul {
