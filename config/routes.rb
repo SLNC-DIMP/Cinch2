@@ -1,6 +1,8 @@
 Cinch2::Application.routes.draw do
  
 
+  get "crawls/crawl"
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
@@ -12,6 +14,7 @@ Cinch2::Application.routes.draw do
   match '/project', to: "static_pages#project"
   match '/contact', to: "static_pages#contact"
   match '/upload',  to: "uploads#upload_form"
+  match '/crawl',   to: "crawls#crawl"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

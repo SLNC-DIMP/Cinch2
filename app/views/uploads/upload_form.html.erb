@@ -5,6 +5,7 @@
 
 <%= form_tag('upload', {multipart: true, id: 'upload_form'}) do %>
   <%= file_field_tag 'file_list' %>
+  <%= render 'layouts/form-convert' %>
   <br /><br />
   <%= submit_tag 'Submit' %>
 <% end %>
