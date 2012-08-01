@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.7'
 
 group :development, :test do
-  gem 'rspec-rails', '2.10.0'
+  gem 'rspec-rails', '~>2.11.0'
+  gem 'guard-rspec', '0.5.5'
   gem "fakefs", :require => "fakefs/safe"
 end
 
@@ -47,46 +48,29 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'parallel'
 gem 'delayed_job_active_record', '~> 0.3.0'
 # gem 'sidekiq'
-
-# curl integration
-gem 'curb', '0.8.1'
-
-# web crawling integration
-gem 'anemone', '0.7.2'
-
-# NLP integration
-gem 'treat', '1.1.2'
-
-# data auditing
-gem 'paper_trail'
-
-# user authentication
-gem 'devise', '2.1.0'
-
-# user roles
-gem 'cancan', '1.6.8'
-
-# admin
-gem 'rails_admin', '0.0.5'
-
-# pagination
-gem 'kaminari', '0.13.0'
-
-# breadcrumbs
-gem 'crummy', "~> 1.6.0"
-
-# zip creation
-gem 'rubyzip'
-
-# convert files to PDF/a
-gem 'rghost', "~> 0.8.7.8"
-
+gem 'curb', '0.8.1'     # curl integration
+gem 'anemone', '0.7.2'  # web crawling integration
+gem 'treat', '1.1.2'    # NLP integration
+gem 'paper_trail'      # data auditing
+gem 'devise', '2.1.0'  # user authentication
+gem 'cancan', '1.6.8'   # user roles
+gem 'rails_admin', '0.0.5'  # admin
+gem 'kaminari', '0.13.0' # pagination
+gem 'crummy', "~> 1.6.0"     # breadcrumbs
+gem 'rubyzip'    # zip creation
+gem 'rghost', "~> 0.8.7.8" # convert files to PDF/a
+gem "galetahub-simple_captcha", :require => "simple_captcha"   # captcha
+gem "active_attr" # Helps use Active Record without actually creating a table (ie contact form validation)
+gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert images to JPEG2000
 # convert images to JPEG2000
 #gem 'rmagick', "2.13.1"
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'rb-fsevent', '0.4.3.1', :require => false
+  gem 'growl', '1.0.3'
   gem 'sqlite3', '1.3.6'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do

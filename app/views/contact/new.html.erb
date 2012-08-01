@@ -1,0 +1,35 @@
+<h1>Contact Us</h1>
+
+<%= form_for @message, :url => contact_path  do |f| %>
+    <% if @message.errors.any? %>
+        <div class="error_messages">
+          <h2><%= pluralize(@message.errors.count, "error") %> blocked your message from being sent:</h2>
+          <ul>
+            <% @message.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= f.label :name %>
+    <br />
+    <%= f.text_field(:name, placeholder: "Name") %>
+    <br />
+    <%= f.label :email %>
+    <br />
+    <%= f.text_field(:email, size: 250, placeholder: "Email") %>
+    <br />
+    <%= f.label(:subject, "Subject: ") %>
+    <br />
+    <%= f.text_field(:subject,  placeholder: "Subject") %>
+    <br />
+    <%= f.label(:body, "Body: ") %>
+    <br />
+    <%= f.text_area(:body,  cols: 75, rows: 10, placeholder: "Your question/comment") %>
+    <br /><br />
+    <%= f.simple_captcha label: "Enter numbers.." %>
+    <br /><br />
+    <%= f.button 'Send Message', class: 'btn btn-primary' %>
+
+<% end %>
