@@ -5,10 +5,10 @@ class Message
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :subject, :body
+  attr_accessor :name, :email, :subject, :body, :captcha, :captcha_key
 
-  validates :name, :email, :subject, :body, :presence => true
-  validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
+  validates_presence_of :name, :email, :subject, :body, :captcha, :captcha_key
+  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
 
   def initialize(attributes = {})
     attributes.each do |name, value|

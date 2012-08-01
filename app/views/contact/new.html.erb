@@ -1,16 +1,6 @@
 <h1>Contact Us</h1>
 
 <%= form_for @message, :url => contact_path  do |f| %>
-    <% if @message.errors.any? %>
-        <div class="error_messages">
-          <h2><%= pluralize(@message.errors.count, "error") %> blocked your message from being sent:</h2>
-          <ul>
-            <% @message.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
 
     <%= f.label :name %>
     <br />
