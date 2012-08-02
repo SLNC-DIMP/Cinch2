@@ -1,25 +1,39 @@
 <h1>Contact Us</h1>
 
-<%= form_for @message, :url => contact_path  do |f| %>
+<div class="form">
+    <%= form_for @message, :url => contact_path  do |f| %>
 
-    <%= f.label :name %>
-    <br />
-    <%= f.text_field(:name, placeholder: "Name") %>
-    <br />
-    <%= f.label :email %>
-    <br />
-    <%= f.text_field(:email, size: 250, placeholder: "Email") %>
-    <br />
-    <%= f.label(:subject, "Subject: ") %>
-    <br />
-    <%= f.text_field(:subject,  placeholder: "Subject") %>
-    <br />
-    <%= f.label(:body, "Body: ") %>
-    <br />
-    <%= f.text_area(:body,  cols: 75, rows: 10, placeholder: "Your question/comment") %>
-    <br /><br />
-    <%= f.simple_captcha label: "Enter numbers.." %>
-    <br /><br />
-    <%= f.button 'Send Message', class: 'btn btn-primary' %>
+         <% if @message.errors.any? %>
+             <div class="error_messages">
+               <h2><%= pluralize(@message.errors.count, "error") %> :</h2>
+               <ul>
+                 <% @message.errors.full_messages.each do |msg| %>
+                     <li><%= msg %></li>
+                 <% end %>
+               </ul>
+             </div>
+         <% end %>
 
-<% end %>
+        <%= f.label :name %>
+        <br />
+        <%= f.text_field(:name, placeholder: "Name") %>
+        <br />
+        <%= f.label :email %>
+        <br />
+        <%= f.text_field(:email, placeholder: "Email") %>
+        <br />
+        <%= f.label(:subject, "Subject: ") %>
+        <br />
+        <%= f.text_field(:subject, placeholder: "Subject") %>
+        <br />
+        <%= f.label(:body, "Question/Comment: ") %>
+        <br />
+        <%= f.text_area(:body, placeholder: "Your question/comment") %>
+        <br />
+        <%= f.show_simple_captcha object: "message",
+                                  label: "Please enter the letters as they are shown in the image above." %>
+        <br /><br />
+        <%= f.button 'Send Message', class: 'btn btn-primary' %>
+
+    <% end %>
+</div>
