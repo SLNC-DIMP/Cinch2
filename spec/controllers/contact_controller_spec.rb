@@ -4,7 +4,7 @@ describe ContactController do
 
   describe "GET 'contact'" do
     it "returns http success" do
-      get 'contact'
+      get 'contact', :new
       response.should be_success
     end
   end

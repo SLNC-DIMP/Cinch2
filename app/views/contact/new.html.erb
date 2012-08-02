@@ -21,7 +21,7 @@
         <br />
         <%= f.text_field(:name, placeholder: "Name") %>
         <br />
-        <%= f.label :email, "Email:" %>:<span class="require">*</span>
+        <%= f.label :email, "Email:" %><span class="require">*</span>
         <br />
         <%= f.text_field(:email, placeholder: "Email") %>
         <br />
@@ -33,7 +33,7 @@
         <br />
         <%= f.text_area(:body, placeholder: "Your question/comment") %>
         <br />
-      <%= f.label(:captcha, "Verification Code:") %><span class="require">*</span>
+        <%= f.label(:captcha, "Verification Code:") %><span class="require">*</span>
         <%= f.show_simple_captcha object: "message",
                                   label: "Please enter the letters as they are shown in the image above." %>
         <br /><br />

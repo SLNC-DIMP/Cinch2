@@ -4,8 +4,9 @@ gem 'rails', '3.2.7'
 
 group :development, :test do
   gem 'rspec-rails', '~>2.11.0'
-  gem 'guard-rspec', '0.5.5'
+  gem 'guard-rspec', '~> 0.7.2'
   gem "fakefs", :require => "fakefs/safe"
+  gem 'factory_girl_rails', '~> 3.2.0'
 end
 
 group :development do
@@ -67,10 +68,12 @@ gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert image
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'faker', '~> 1.0.1'
+  gem 'database_cleaner', '~> 0.7.2'
+  gem 'launchy', '~> 2.1.0'
   gem 'rb-fsevent', '0.4.3.1', :require => false
   gem 'growl', '1.0.3'
   gem 'sqlite3', '1.3.6'
-  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do
