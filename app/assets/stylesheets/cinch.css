@@ -54,6 +54,8 @@ form {
     background-color: #fff;
 }
 
+.require { color: red }
+
 .reg_form {
     border: 2px solid #ccc;
     padding: 2%;
@@ -64,13 +66,13 @@ form {
     margin-left: 30%
 }
 
-.error_messages {
+.alert-error {
     border: 1px solid #ccc;
     padding-left: 15px;
-    color: red;
     width: 300px;
     font-size: 1.1em;
-    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .error_messages h2 {
