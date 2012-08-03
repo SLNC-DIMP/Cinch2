@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801093529) do
+ActiveRecord::Schema.define(:version => 20120803154702) do
+
+  create_table "crawls", :force => true do |t|
+    t.string   "url"
+    t.integer  "pdfa"
+    t.integer  "jpeg2000"
+    t.integer  "processed"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -50,6 +60,16 @@ ActiveRecord::Schema.define(:version => 20120801093529) do
   end
 
   add_index "simple_captcha_data", ["key"], :name => "idx_key"
+
+  create_table "uploads", :force => true do |t|
+    t.string   "path"
+    t.integer  "pdfa"
+    t.integer  "jpeg2000"
+    t.integer  "processed"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
