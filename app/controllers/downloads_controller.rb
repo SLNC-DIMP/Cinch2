@@ -1,9 +1,10 @@
-class UploadsController < ApplicationController
+class DownloadsController < ApplicationController
   before_filter :authenticate_user!
 
-  def new
+  def index
   end
-  
+
   def create
+
   end
 end

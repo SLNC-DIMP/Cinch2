@@ -1,10 +1,14 @@
 class CrawlsController < ApplicationController
   before_filter :authenticate_user!
 
-  def index
+  def new
   end
 
-  def crawl_results
+  def create
+
+  end
+
+  def show
 
   end
 end

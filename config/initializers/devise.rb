@@ -94,7 +94,7 @@ Devise.setup do |config|
 
   # If true, requires any email changes to be confirmed (exactly the same way as
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
-  # db field (see migrations). Until confirmed new email is stored in
+  # db field (see migrations). Until confirmed index email is stored in
   # unconfirmed email column, and copied to email column on successful confirmation.
   config.reconfirmable = true
 
@@ -172,8 +172,8 @@ Devise.setup do |config|
   # config.token_authentication_key = :auth_token
 
   # ==> Scopes configuration
-  # Turn scoped views on. Before rendering "sessions/new", it will first check for
-  # "users/sessions/new". It's turned off by default because it's slower if you
+  # Turn scoped views on. Before rendering "sessions/index", it will first check for
+  # "users/sessions/index". It's turned off by default because it's slower if you
   # are using only default views.
   # config.scoped_views = false
 
@@ -201,7 +201,7 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   # ==> OmniAuth
-  # Add a new OmniAuth provider. Check the wiki for more information on setting
+  # Add a index OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
 

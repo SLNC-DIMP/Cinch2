@@ -1,7 +1,10 @@
-<%= form_tag({:action => :upload}, :multipart => true) do %>
-  <%= file_field_tag 'picture' %>
-<% end %>
- 
-<%= form_for @upload do |f| %>
-  <%= f.file_field :picture %>
-<% end %>
+<div class="hero-unit">
+  <h1>Select a file to upload to Cinch</h1>
+  <p>Files must be .txt or .cvs files.
+    Please make sure each URL listed is on its own line in your file, and
+    limit your list to a maximum of 10,000 urls.</p>
+  <%= form_tag('upload', {multipart: true, id: 'upload_form'}) do %>
+      <%= file_field_tag 'file_list' %>
+      <%= render 'layouts/form-convert' %>
+  <% end %>
+</div>

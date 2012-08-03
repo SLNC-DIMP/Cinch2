@@ -4,5 +4,6 @@ FactoryGirl.define do
     subject "Test"
     body "This looks really cool!"
     email "dean_-@example.com"
+
   end
 end

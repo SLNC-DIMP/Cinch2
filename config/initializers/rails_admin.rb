@@ -18,7 +18,7 @@ RailsAdmin.config do |config|
   # Set the admin name here (optional second array element will appear in a beautiful RailsAdmin red ©)
   config.main_app_name = ['Cinch2', 'Admin']
   # or for a dynamic name:
-  # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
+  # config.main_app_name = Proc.index { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
 
   #  ==> Global show view settings

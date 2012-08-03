@@ -1,0 +1,8 @@
+<div class="hero-unit">
+<h1>Enter a Url to crawl:</h1>
+<%= form_tag('crawl', {class: 'reg_form'}) do %>
+    <%= label_tag(:crawl_url, "Enter a Url to index: ") %>
+    <%= text_field(:crawl_url, '', placeholder: "Url to crawl") %>
+    <%= render 'layouts/form-convert' %>
+<% end %>
+</div>
