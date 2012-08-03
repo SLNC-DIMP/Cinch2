@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20120803154702) do
 
   add_index "simple_captcha_data", ["key"], :name => "idx_key"
 
-  create_table "uploads", :force => true do |t|
+  create_table "upload", :force => true do |t|
     t.string   "path"
     t.integer  "pdfa"
     t.integer  "jpeg2000"

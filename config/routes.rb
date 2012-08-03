@@ -11,7 +11,9 @@ Cinch2::Application.routes.draw do
   match '/project',       to: "static_pages#project"
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
-  match '/upload',        to: "uploads#new"
+  match 'uploads' => 'upload#new', :as => 'uploads', :via => :get
+  match 'uploads' => 'upload#create', :as => 'uploads', :via => :post
+ # match 'uploads',        to: "upload#new"
   match '/crawl',         to: "crawls#new"
   match '/crawl_results', to: "crawls#index"
   match '/download',     to: "downloads#index"

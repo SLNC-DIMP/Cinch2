@@ -1,6 +1,6 @@
 class CreateUploads < ActiveRecord::Migration
   def change
-    create_table :uploads do |t|
+    create_table :upload do |t|
       t.string :path
       t.integer :pdfa
       t.integer :jpeg2000
