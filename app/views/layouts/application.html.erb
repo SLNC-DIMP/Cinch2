@@ -11,6 +11,9 @@
 <%= render 'layouts/menu' %>
 
 <div id="mainwrap">
+  <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% end %>
 <%= yield %>
 <div id="foot">
   <ul>
