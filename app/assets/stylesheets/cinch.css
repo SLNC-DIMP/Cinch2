@@ -56,7 +56,7 @@ form {
 
 .require { color: red }
 
-.reg_form {
+.reg_form, .new_upload {
     border: 2px solid #ccc;
     padding: 2%;
     width: 350px;

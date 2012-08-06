@@ -1,7 +1,11 @@
-class Upload < ActiveRecord::Base
-  belongs_to :user
-  attr_accessible :path, :pdfa, :jpeg2000, :processed, :user_id
+require 'carrierwave/orm/activerecord'
 
-  validates_format_of :path, :with => /\.(txt|cvs)$/i, :on => :create,
-    :message => "- Please choose a .txt or .csv file"
+class Upload < ActiveRecord::Base
+  attr_accessible :path, :path_cache, :pdfa, :jpeg2000, :processed, :user_id
+  belongs_to :user
+  mount_uploader :path, PathUploader
+
+  validates_presence_of :path
+  validates_integrity_of :path
+  validates_processing_of :path
 end

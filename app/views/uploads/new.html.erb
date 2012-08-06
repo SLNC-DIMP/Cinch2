@@ -4,11 +4,10 @@
     Please make sure each URL listed is on its own line in your file, and
     limit your list to a maximum of 10,000 urls.</p>
 
-  <%= form_tag(@upload, :url => uploads_path, multipart: true, id: 'upload_form', class: 'reg_form') do %>
+  <%= form_for @upload, :url => uploads_path, :multipart => true do |f| %>
 
       <% if @upload.errors.any? %>
           <div class="alert-error">
-            <h2><%= pluralize(@upload.errors.count, "error") %> :</h2>
             <ul>
               <% @upload.errors.full_messages.each do |msg| %>
                   <li><%= msg %></li>
@@ -17,7 +16,8 @@
           </div>
       <% end %>
 
-      <%= file_field_tag 'path' %>
+      <%= f.file_field :path %>
+      <%= f.hidden_field :path_cache %>
       <%= render 'layouts/form-convert' %>
   <% end %>
 </div>

@@ -8,7 +8,7 @@
 
          <% if @message.errors.any? %>
              <div class="alert-error">
-               <h2><%= pluralize(@message.errors.count, "error") %> :</h2>
+               <h3><%= pluralize(@message.errors.count, "error") %> :</h3>
                <ul>
                  <% @message.errors.full_messages.each do |msg| %>
                      <li><%= msg %></li>

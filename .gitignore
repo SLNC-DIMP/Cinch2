@@ -14,6 +14,7 @@
 /log/*.log
 /tmp
 .idea/*
+public/uploads/*
 
 doc/
 .DS_Store

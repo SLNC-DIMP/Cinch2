@@ -23,6 +23,7 @@
     <li><%= link_to image_tag("IMLS_Logo.png", alt: "IMLS Logo"), "http://www.imls.gov" %></li>
   </ul>
 </div>
+  <%= debug(params) if Rails.env.development? %>
 </div>
 </body>
 </html>

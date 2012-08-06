@@ -49,6 +49,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'parallel'
 gem 'delayed_job_active_record', '~> 0.3.0'
 # gem 'sidekiq'
+gem "carrierwave" # file uploads
 gem 'curb', '0.8.1'     # curl integration
 gem 'anemone', '0.7.2'  # web crawling integration
 gem 'treat', '1.1.2'    # NLP integration
@@ -56,7 +57,7 @@ gem 'paper_trail'      # data auditing
 gem 'devise', '2.1.0'  # user authentication
 gem 'cancan', '1.6.8'   # user roles
 gem 'rails_admin', '0.0.5'  # admin
-gem 'kaminari', '0.13.0' # pagination
+gem 'will_paginate', '~> 3.0' # pagination
 gem 'crummy', "~> 1.6.0"     # breadcrumbs
 gem 'rubyzip'    # zip creation
 gem 'rghost', "~> 0.8.7.8" # convert files to PDF/a
