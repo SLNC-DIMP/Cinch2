@@ -2,8 +2,10 @@
 
 FactoryGirl.define do
   factory :crawl do
-    url "MyString"
-    processed 1
+    url "http://ncdcr.gov"
+    pdfa 1
+    jpeg2000 1
+    processed "NULL"
     user_id 1
   end
 end

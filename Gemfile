@@ -70,6 +70,7 @@ gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert image
 group :test do
   gem 'capybara', '1.1.2'
   gem 'faker', '~> 1.0.1'
+  gem 'shoulda-matchers'
   gem 'database_cleaner', '~> 0.7.2'
   gem 'launchy', '~> 2.1.0'
   gem 'rb-fsevent', '0.4.3.1', :require => false
