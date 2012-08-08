@@ -14,7 +14,8 @@ Cinch2::Application.routes.draw do
   match 'uploads' => 'uploads#new', :as => 'uploads', :via => :get
   match 'uploads' => 'uploads#create', :as => 'uploads', :via => :post
  # match 'uploads',        to: "uploads#new"
-  match '/crawl',         to: "crawls#new"
+  match '/crawl' => "crawls#new", :as => 'crawl', :via => :get
+  match '/crawl' => "crawls#create", :as => 'crawl', :via => :post
   match '/crawl_results', to: "crawls#index"
   match '/download',     to: "downloads#index"
   # The priority is based upon order of creation:

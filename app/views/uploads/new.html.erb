@@ -6,15 +6,7 @@
 
   <%= form_for @upload, :url => uploads_path, :multipart => true do |f| %>
 
-      <% if @upload.errors.any? %>
-          <div class="alert-error">
-            <ul>
-              <% @upload.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
+      <%= render 'layouts/error_messages', target: @upload %>
 
       <%= f.file_field :path %>
       <%= f.hidden_field :path_cache %>

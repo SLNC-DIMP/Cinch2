@@ -6,16 +6,7 @@
 
     <%= form_for @message, :url => contact_path  do |f| %>
 
-         <% if @message.errors.any? %>
-             <div class="alert-error">
-               <h3><%= pluralize(@message.errors.count, "error") %> :</h3>
-               <ul>
-                 <% @message.errors.full_messages.each do |msg| %>
-                     <li><%= msg %></li>
-                 <% end %>
-               </ul>
-             </div>
-         <% end %>
+      <%= render 'layouts/error_messages', target: @message %>
 
         <%= f.label :name, "Name:" %><span class="require">*</span>
         <br />

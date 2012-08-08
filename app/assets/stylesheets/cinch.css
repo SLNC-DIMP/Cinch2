@@ -56,20 +56,20 @@ form {
 
 .require { color: red }
 
-.reg_form, .new_upload {
+.reg_form, .new_upload, .new_crawl {
     border: 2px solid #ccc;
     padding: 2%;
-    width: 350px;
+    width: 400px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    margin-left: 30%
+    margin-left: 25%
 }
 
 .alert-error {
     border: 1px solid #ccc;
     padding-left: 15px;
-    width: 300px;
+    width: 375px;
     font-size: 1.1em;
     margin-bottom: 5px;
     border-radius: 5px;

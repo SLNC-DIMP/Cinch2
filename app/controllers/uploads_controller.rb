@@ -1,5 +1,3 @@
-require "fileutils"
-
 class UploadsController < ApplicationController
   before_filter :authenticate_user!
 
@@ -22,9 +20,5 @@ class UploadsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def process_files
-    @uploads = Upload.where(:processed => 0)
   end
 end
