@@ -1,5 +1,6 @@
 <div class="hero-unit">
 <h1>Enter a Url to crawl:</h1>
+  <p>(Please include the leading http:// or https:// for your url)</p>
 <%= form_for @crawl, :url => crawl_path do |f| %>
 
     <%= render 'layouts/error_messages', target: @crawl %>
