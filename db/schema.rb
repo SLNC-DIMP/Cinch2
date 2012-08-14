@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814155843) do
+ActiveRecord::Schema.define(:version => 20120814190049) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(:version => 20120814155843) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "csv_meta_paths", :force => true do |t|
+    t.integer  "user_id",    :limit => 8
+    t.string   "path"
+    t.integer  "zipped"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  create_table "error_types", :force => true do |t|
+    t.string   "error_message"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "file_infos", :force => true do |t|
@@ -43,6 +57,13 @@ ActiveRecord::Schema.define(:version => 20120814155843) do
     t.integer  "upload_file_id",     :limit => 1,    :default => 0
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
+  end
+
+  create_table "file_types", :force => true do |t|
+    t.string   "file_type"
+    t.string   "file_type_name"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|

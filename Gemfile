@@ -63,9 +63,10 @@ gem 'will_paginate', '~> 3.0' # pagination
 gem 'crummy', "~> 1.6.0"     # breadcrumbs
 gem 'rubyzip'    # zip creation
 gem 'rghost', "~> 0.8.7.8" # convert files to PDF/a
-gem "galetahub-simple_captcha", :require => "simple_captcha"   # captcha
+gem "galetahub-simple_captcha", require: "simple_captcha"   # captcha
 gem "active_attr" # Helps use Active Record without actually creating a table (ie contact form validation)
 gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert images to JPEG2000
+gem 'bagit', require: "validatable"
 # convert images to JPEG2000
 #gem 'rmagick', "2.13.1"
 
