@@ -39,18 +39,22 @@ Learn more at: http://digitalpreservation.ncdcr.gov/cinch/.
 Funding for the CINCH: Capture, Ingest, & Checksum tool was made possible through 
 an IMLS Sparks! Ignition grant.
 
-License:  CINCH and CINCH2 are released under the Unlicense (http://unlicense.org/)
+License:  CINCH2 is released under the Unlicense (http://unlicense.org/)
+Individual gems maintain their own licenses, generally MIT.  One exception is Sidekiq which
+is licensed under the LGPLv3.  Commercial use of Sidekiq requires the purchase of a license.
 -------------------------
 Requirements
 
 * Currently Cinch2 will only run on *nix systems
-* Ruby 1.9.2+
+* Ruby 1.9.3+
 * Rails 3.2.* (We use 3.2.7)
 * MySQL or SQLite3
 * ClamAV
-* ImageMagick   6.3.5+
+* Redis
+* ImageMagick 6.3.5+
 * Ghostscript
 * libcurl 7.5+
+* Apache Tika
 
 Recommended, but not required:
 
