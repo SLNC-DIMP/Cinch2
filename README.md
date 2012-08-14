@@ -42,6 +42,7 @@ an IMLS Sparks! Ignition grant.
 License:  CINCH2 is released under the Unlicense (http://unlicense.org/)
 Individual gems maintain their own licenses, generally MIT.  One exception is Sidekiq which
 is licensed under the LGPLv3.  Commercial use of Sidekiq requires the purchase of a license.
+
 -------------------------
 Requirements
 

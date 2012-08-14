@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814201043) do
+ActiveRecord::Schema.define(:version => 20120814201820) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -71,6 +71,15 @@ ActiveRecord::Schema.define(:version => 20120814201043) do
     t.string   "file_type_name"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "files_for_downloads", :force => true do |t|
+    t.string   "url",             :limit => 1024
+    t.integer  "user_uploads_id", :limit => 8
+    t.integer  "user_id",         :limit => 8
+    t.integer  "processed",                       :default => 0
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   create_table "problem_files", :force => true do |t|
