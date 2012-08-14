@@ -4,7 +4,7 @@
     Please make sure each URL listed is on its own line in your file, and
     limit your list to a maximum of 10,000 urls.</p>
 
-  <%= form_for @upload, :url => uploads_path, :multipart => true do |f| %>
+  <%= form_for @upload, :url => upload_path, :multipart => true do |f| %>
 
       <%= render 'layouts/error_messages', target: @upload %>
 

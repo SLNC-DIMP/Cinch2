@@ -1,5 +1,3 @@
-require 'carrierwave/orm/activerecord'
-
 class Upload < ActiveRecord::Base
   attr_accessible :path, :path_cache, :pdfa, :jpeg2000, :processed, :user_id
   belongs_to :user

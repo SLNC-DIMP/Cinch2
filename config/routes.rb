@@ -11,10 +11,10 @@ Cinch2::Application.routes.draw do
   match '/project',       to: "static_pages#project"
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
-  match 'uploads' => 'uploads#new', :as => 'uploads', :via => :get
-  match 'uploads' => 'uploads#create', :as => 'uploads', :via => :post
-  match '/crawl' => "crawls#new", :as => 'crawl', :via => :get
-  match '/crawl' => "crawls#create", :as => 'crawl', :via => :post
+  match 'upload' => 'uploads#new', :as => 'upload', :via => :get
+  match 'upload' => 'uploads#create', :as => 'upload', :via => :post
+  match 'crawl' => "crawls#new", :as => 'crawl', :via => :get
+  match 'crawl' => "crawls#create", :as => 'crawl', :via => :post
   match '/crawl_results', to: "crawls#index"
   match '/download',      to: "downloads#index"
   # The priority is based upon order of creation:
