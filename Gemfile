@@ -46,9 +46,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # parallel processing and background tasks
 # gem 'amqp', '0.8.0'
-gem 'parallel'
-gem 'delayed_job_active_record', '~> 0.3.0'
-# gem 'sidekiq'
+#gem 'parallel'
+#gem 'delayed_job_active_record', '~> 0.3.0'
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
 gem "carrierwave" # file uploads
 gem 'curb', '0.8.1'     # curl integration
 gem 'anemone', '0.7.2'  # web crawling integration

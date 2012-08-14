@@ -53,6 +53,8 @@ GEM
     carrierwave (0.6.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
+    celluloid (0.11.1)
+      timers (>= 1.0.0)
     childprocess (0.3.3)
       ffi (~> 1.0.6)
     coffee-rails (3.2.2)
@@ -63,14 +65,10 @@ GEM
       execjs
     coffee-script-source (1.3.3)
     commonjs (0.2.6)
+    connection_pool (0.9.2)
     crummy (1.6.0)
     curb (0.8.1)
     database_cleaner (0.7.2)
-    delayed_job (3.0.3)
-      activesupport (~> 3.0)
-    delayed_job_active_record (0.3.2)
-      activerecord (> 2.1.0)
-      delayed_job (~> 3.0.0)
     devise (2.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.7)
@@ -138,7 +136,6 @@ GEM
     paper_trail (2.6.3)
       activerecord (~> 3.0)
       railties (~> 3.0)
-    parallel (0.5.17)
     polyglot (0.3.3)
     progressbar (0.11.0)
     rack (1.4.1)
@@ -147,6 +144,8 @@ GEM
     rack-pjax (0.5.9)
       hpricot (~> 0.8.6)
       rack (~> 1.3)
+    rack-protection (1.2.0)
+      rack
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.1)
@@ -183,6 +182,9 @@ GEM
     rb-fsevent (0.4.3.1)
     rdoc (3.12)
       json (~> 1.4)
+    redis (3.0.1)
+    redis-namespace (1.2.1)
+      redis (~> 3.0.0)
     remotipart (1.0.2)
     rghost (0.8.7.8)
     robotex (1.0.0)
@@ -221,6 +223,19 @@ GEM
     sexp_processor (3.2.0)
     shoulda-matchers (1.2.0)
       activesupport (>= 3.0.0)
+    sidekiq (2.1.1)
+      celluloid (~> 0.11.1)
+      connection_pool (~> 0.9.2)
+      multi_json (~> 1)
+      redis (~> 3)
+      redis-namespace
+    sinatra (1.3.2)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    slim (1.2.2)
+      temple (~> 0.4.0)
+      tilt (~> 1.3.3)
     sourcify (0.4.2)
       file-tail (>= 1.0.5)
       ruby2ruby (>= 1.2.5)
@@ -231,10 +246,12 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
     subexec (0.2.2)
+    temple (0.4.0)
     therubyracer (0.10.1)
       libv8 (~> 3.3.10)
     thor (0.15.4)
     tilt (1.3.3)
+    timers (1.0.1)
     tins (0.4.3)
     treat (1.1.2)
       birch
@@ -273,7 +290,6 @@ DEPENDENCIES
   crummy (~> 1.6.0)
   curb (= 0.8.1)
   database_cleaner (~> 0.7.2)
-  delayed_job_active_record (~> 0.3.0)
   devise (= 2.1.0)
   factory_girl_rails (~> 3.2.0)
   fakefs
@@ -286,7 +302,6 @@ DEPENDENCIES
   mini_magick (= 3.4)
   mysql2 (~> 0.3.10)
   paper_trail
-  parallel
   rails (= 3.2.7)
   rails_admin (= 0.0.5)
   rb-fsevent (= 0.4.3.1)
@@ -295,6 +310,9 @@ DEPENDENCIES
   rubyzip
   sass-rails (= 3.2.4)
   shoulda-matchers
+  sidekiq
+  sinatra
+  slim
   sqlite3 (= 1.3.6)
   treat (= 1.1.2)
   twitter-bootstrap-rails (~> 2.1.0)
