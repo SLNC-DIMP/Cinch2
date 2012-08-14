@@ -1,5 +1,5 @@
 class CreateFilesForDownloads < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :files_for_downloads do |t|
       t.string :url, :limit => 1024
       t.integer :user_uploads_id, :limit => 7
@@ -8,5 +8,9 @@ class CreateFilesForDownloads < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def self.down
+    drop_table :files_for_downloads
   end
 end

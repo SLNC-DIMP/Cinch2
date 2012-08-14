@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814201820) do
+ActiveRecord::Schema.define(:version => 20120814202712) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -111,6 +111,18 @@ ActiveRecord::Schema.define(:version => 20120814201820) do
   end
 
   add_index "simple_captcha_data", ["key"], :name => "idx_key"
+
+  create_table "text_metadatas", :force => true do |t|
+    t.string   "content_encoding",      :limit => 50
+    t.string   "file_size",             :limit => 12
+    t.string   "file_name",             :limit => 1024
+    t.string   "possible_doc_title"
+    t.string   "possible_doc_keywords"
+    t.integer  "file_id"
+    t.integer  "user_id",               :limit => 8
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
 
   create_table "uploads", :force => true do |t|
     t.string   "path"
