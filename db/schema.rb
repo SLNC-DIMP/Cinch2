@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814190049) do
+ActiveRecord::Schema.define(:version => 20120814201043) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(:version => 20120814190049) do
     t.string   "error_message"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "file_event_histories", :force => true do |t|
+    t.integer  "file_id"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "file_infos", :force => true do |t|
@@ -64,6 +71,14 @@ ActiveRecord::Schema.define(:version => 20120814190049) do
     t.string   "file_type_name"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "problem_files", :force => true do |t|
+    t.integer  "error_id",   :limit => 3
+    t.integer  "file_id"
+    t.integer  "csv_added",               :default => 0
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|

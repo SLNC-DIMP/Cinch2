@@ -51,7 +51,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
-gem "carrierwave" # file uploads
+
+gem 'carrierwave' # file uploads
 gem 'curb', '0.8.1'     # curl integration
 gem 'anemone', '0.7.2'  # web crawling integration
 gem 'treat', '1.1.2'    # NLP integration
@@ -60,13 +61,13 @@ gem 'devise', '2.1.0'  # user authentication
 gem 'cancan', '1.6.8'   # user roles
 gem 'rails_admin', '0.0.5'  # admin
 gem 'will_paginate', '~> 3.0' # pagination
-gem 'crummy', "~> 1.6.0"     # breadcrumbs
+gem 'crummy', '~> 1.6.0'     # breadcrumbs
 gem 'rubyzip'    # zip creation
-gem 'rghost', "~> 0.8.7.8" # convert files to PDF/a
-gem "galetahub-simple_captcha", require: "simple_captcha"   # captcha
+gem 'rghost', '~> 0.8.7.8' # convert files to PDF/a
+gem 'galetahub-simple_captcha', require: 'simple_captcha'   # captcha
 gem "active_attr" # Helps use Active Record without actually creating a table (ie contact form validation)
 gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert images to JPEG2000
-gem 'bagit', require: "validatable"
+gem 'bagit', require: 'validatable'
 # convert images to JPEG2000
 #gem 'rmagick', "2.13.1"
 
