@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814152316) do
+ActiveRecord::Schema.define(:version => 20120814155843) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -21,6 +21,28 @@ ActiveRecord::Schema.define(:version => 20120814152316) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "file_infos", :force => true do |t|
+    t.string   "org_file_path",      :limit => 2084
+    t.string   "temp_file_path",     :limit => 1000
+    t.integer  "file_type_id",       :limit => 1,    :default => 0
+    t.integer  "checksum_run",       :limit => 1,    :default => 0
+    t.string   "remote_checksum",    :limit => 40
+    t.string   "checksum",           :limit => 40
+    t.integer  "virus_check",        :limit => 1,    :default => 0
+    t.integer  "fulltext_available", :limit => 1,    :default => 0
+    t.integer  "metadata",           :limit => 1,    :default => 0
+    t.integer  "dynamic_file",       :limit => 1,    :default => 0
+    t.string   "last_modified",      :limit => 15
+    t.integer  "zipped",             :limit => 1,    :default => 0
+    t.integer  "problem_file",       :limit => 1,    :default => 0
+    t.integer  "events_frozen",      :limit => 1,    :default => 0
+    t.integer  "expired_deleted",    :limit => 1,    :default => 0
+    t.integer  "user_id",            :limit => 1,    :default => 0
+    t.integer  "upload_file_id",     :limit => 1,    :default => 0
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|
