@@ -1,5 +1,5 @@
 class CreatePngMetadatas < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :png_metadatas do |t|
       t.string :black_is_zero, :limit => 10
       t.string :color_space_type, :limit => 25
@@ -27,5 +27,9 @@ class CreatePngMetadatas < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def self.down
+    drop_table :png_metadatas
   end
 end
