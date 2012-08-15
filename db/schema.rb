@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815174335) do
+ActiveRecord::Schema.define(:version => 20120815183838) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(:version => 20120815174335) do
     t.string   "error_message"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "event_lists", :force => true do |t|
+    t.string   "event_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "excel_metadatas", :force => true do |t|
@@ -323,6 +329,15 @@ ActiveRecord::Schema.define(:version => 20120815174335) do
     t.integer  "user_id",               :limit => 8
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
+  end
+
+  create_table "zip_gz_downloads", :force => true do |t|
+    t.integer  "user_id",           :limit => 8
+    t.string   "path",              :limit => 500
+    t.integer  "downloaded",                       :default => 0
+    t.integer  "deletion_reminder",                :default => 0
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
   end
 
 end
