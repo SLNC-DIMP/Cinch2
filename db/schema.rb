@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815170949) do
+ActiveRecord::Schema.define(:version => 20120815174335) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -35,6 +35,29 @@ ActiveRecord::Schema.define(:version => 20120815170949) do
     t.string   "error_message"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "excel_metadatas", :force => true do |t|
+    t.string   "app_name",              :limit => 50
+    t.string   "app_version",           :limit => 50
+    t.string   "author"
+    t.string   "company"
+    t.string   "content_type",          :limit => 100
+    t.string   "creationdate",          :limit => 50
+    t.string   "last_author"
+    t.string   "last_modified"
+    t.string   "creator"
+    t.string   "date_create"
+    t.string   "protected",             :limit => 25
+    t.string   "publisher"
+    t.string   "resourcename"
+    t.string   "title"
+    t.string   "possible_doc_title"
+    t.string   "possible_doc_keywords"
+    t.integer  "file_id"
+    t.integer  "user_id",               :limit => 8
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   create_table "file_event_histories", :force => true do |t|
