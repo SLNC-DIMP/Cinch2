@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815150150) do
+ActiveRecord::Schema.define(:version => 20120815170949) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -80,6 +80,74 @@ ActiveRecord::Schema.define(:version => 20120815150150) do
     t.integer  "processed",                       :default => 0
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
+  end
+
+  create_table "gif_metadatas", :force => true do |t|
+    t.string   "black_is_zero",                     :limit => 10
+    t.string   "color_space_type",                  :limit => 25
+    t.integer  "num_channels"
+    t.string   "compression_type",                  :limit => 25
+    t.string   "lossless_compression",              :limit => 10
+    t.integer  "compression_num_progressive_scans"
+    t.integer  "file_size"
+    t.string   "data_sample_format",                :limit => 25
+    t.integer  "horizontal_pixel_offset",           :limit => 8
+    t.string   "orientation",                       :limit => 25
+    t.integer  "vertical_pixel_offset",             :limit => 8
+    t.string   "graphic_control_extension",         :limit => 500
+    t.string   "image_descriptor",                  :limit => 300
+    t.integer  "height",                            :limit => 8
+    t.string   "file_name",                         :limit => 1024
+    t.integer  "width",                             :limit => 8
+    t.integer  "file_id"
+    t.integer  "user_id",                           :limit => 8
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
+  end
+
+  create_table "jpg_metadatas", :force => true do |t|
+    t.string   "author"
+    t.string   "color_space",          :limit => 25
+    t.string   "component_one",        :limit => 150
+    t.string   "component_two",        :limit => 150
+    t.string   "component_three",      :limit => 150
+    t.string   "compression",          :limit => 25
+    t.string   "content_type",         :limit => 50
+    t.string   "data_precision",       :limit => 15
+    t.string   "date_time",            :limit => 50
+    t.string   "exif_image_height",    :limit => 25
+    t.string   "exif_image_width",     :limit => 25
+    t.string   "last_modified",        :limit => 50
+    t.string   "number_of_components", :limit => 5
+    t.string   "orientation",          :limit => 75
+    t.string   "software",             :limit => 75
+    t.string   "x_resolution",         :limit => 50
+    t.string   "y_resolution",         :limit => 50
+    t.string   "resourcename"
+    t.integer  "file_id"
+    t.integer  "user_id",              :limit => 8
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+  end
+
+  create_table "pdf_metadatas", :force => true do |t|
+    t.string   "author",                :limit => 250
+    t.string   "creation_date",         :limit => 30
+    t.string   "last_modified",         :limit => 30
+    t.string   "creator",               :limit => 250
+    t.string   "producer",              :limit => 250
+    t.string   "resource_name",         :limit => 250
+    t.string   "title",                 :limit => 500
+    t.integer  "pages",                 :limit => 8
+    t.string   "subject",               :limit => 250
+    t.string   "keywords",              :limit => 500
+    t.string   "licensed_to",           :limit => 250
+    t.string   "possible_doc_title"
+    t.string   "possible_doc_keywords"
+    t.integer  "file_id"
+    t.integer  "user_id",               :limit => 8
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   create_table "png_metadatas", :force => true do |t|
