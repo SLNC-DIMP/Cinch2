@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814202712) do
+ActiveRecord::Schema.define(:version => 20120815150150) do
 
   create_table "crawls", :force => true do |t|
     t.string   "url"
@@ -80,6 +80,60 @@ ActiveRecord::Schema.define(:version => 20120814202712) do
     t.integer  "processed",                       :default => 0
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
+  end
+
+  create_table "png_metadatas", :force => true do |t|
+    t.string   "black_is_zero",                     :limit => 10
+    t.string   "color_space_type",                  :limit => 25
+    t.integer  "num_channels"
+    t.string   "compression_type",                  :limit => 25
+    t.string   "lossless_compression",              :limit => 10
+    t.integer  "compression_num_progressive_scans"
+    t.string   "file_size",                         :limit => 10
+    t.string   "bits_per_sample",                   :limit => 25
+    t.string   "planar_configuration",              :limit => 50
+    t.string   "data_sample_format",                :limit => 50
+    t.string   "orientation",                       :limit => 25
+    t.string   "pixel_aspect_ratio",                :limit => 25
+    t.string   "vertical_pixel_size",               :limit => 25
+    t.string   "horizontal_pixel_size",             :limit => 25
+    t.string   "ihdr",                              :limit => 500
+    t.string   "text_entry",                        :limit => 500
+    t.string   "transparency_alpha",                :limit => 50
+    t.integer  "height",                            :limit => 8
+    t.string   "phys"
+    t.string   "file_name",                         :limit => 1024
+    t.integer  "width",                             :limit => 8
+    t.integer  "file_id"
+    t.integer  "user_id",                           :limit => 8
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
+  end
+
+  create_table "ppt_metadatas", :force => true do |t|
+    t.string   "app_name",              :limit => 50
+    t.string   "app_version",           :limit => 50
+    t.string   "author"
+    t.string   "comments",              :limit => 500
+    t.string   "content_type",          :limit => 100
+    t.string   "creationdate"
+    t.string   "last_author"
+    t.string   "last_modified"
+    t.string   "last_save_date"
+    t.string   "keywords"
+    t.integer  "slide_count"
+    t.string   "template",              :limit => 50
+    t.string   "publisher"
+    t.string   "resource_name"
+    t.string   "subject"
+    t.string   "title"
+    t.integer  "pages",                 :limit => 8
+    t.string   "possible_doc_title"
+    t.string   "possible_doc_keywords"
+    t.integer  "file_id"
+    t.integer  "user_id",               :limit => 8
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   create_table "problem_files", :force => true do |t|
@@ -151,5 +205,33 @@ ActiveRecord::Schema.define(:version => 20120814202712) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "word_metadatas", :force => true do |t|
+    t.string   "app_name",              :limit => 50
+    t.string   "app_version",           :limit => 50
+    t.string   "author"
+    t.string   "comments"
+    t.string   "company"
+    t.string   "content_type",          :limit => 100
+    t.string   "creationdate",          :limit => 50
+    t.string   "keywords"
+    t.string   "last_author"
+    t.string   "last_modified"
+    t.integer  "pages",                 :limit => 8
+    t.integer  "revision_number"
+    t.string   "template",              :limit => 50
+    t.string   "creator"
+    t.string   "date_create"
+    t.string   "publisher"
+    t.string   "resourcename"
+    t.string   "subject"
+    t.string   "title"
+    t.string   "possible_doc_title"
+    t.string   "possible_doc_keywords"
+    t.integer  "file_id"
+    t.integer  "user_id",               :limit => 8
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+  end
 
 end

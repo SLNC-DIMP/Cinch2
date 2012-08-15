@@ -1,5 +1,5 @@
 class CreateTextMetadatas < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :text_metadatas do |t|
       t.string :content_encoding, :limit => 50
       t.string :file_size, :limit => 12
@@ -11,5 +11,9 @@ class CreateTextMetadatas < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def self.down
+    drop_table :text_metadatas
   end
 end
