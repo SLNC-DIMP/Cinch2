@@ -1,4 +1,6 @@
 class JpgMetadatas < ActiveRecord::Base
+  belongs_to :file_infos
+
   attr_accessible :author,
       :color_space,
       :component_one,

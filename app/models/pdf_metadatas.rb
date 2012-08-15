@@ -1,4 +1,6 @@
 class PdfMetadatas < ActiveRecord::Base
+  belongs_to :file_infos
+
   attr_accessible :author,
                   :creation_date,
                   :last_modified,

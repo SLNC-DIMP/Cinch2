@@ -1,4 +1,6 @@
 class ExcelMetadatas < ActiveRecord::Base
+  belongs_to :file_infos
+
   attr_accessible :app_name,
                   :app_version,
                   :author,

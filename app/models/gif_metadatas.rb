@@ -1,4 +1,6 @@
 class GifMetadatas < ActiveRecord::Base
+  belongs_to :file_infos
+
   attr_accessible :black_is_zero,
                   :color_space_type,
                   :num_channels,

@@ -1,5 +1,5 @@
 class CreateFileInfos < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :file_infos do |t|
       t.string  :org_file_path, :limit => 2084
       t.string  :temp_file_path, :limit => 1000
@@ -21,5 +21,9 @@ class CreateFileInfos < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def self.down
+    drop_table :file_infos
   end
 end

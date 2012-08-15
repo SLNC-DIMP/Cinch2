@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(:version => 20120815183838) do
 
   create_table "crawls", :force => true do |t|
-    t.string   "url"
-    t.integer  "pdfa"
-    t.integer  "jpeg2000"
-    t.integer  "processed"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "url",        :limit => 1024
+    t.integer  "pdfa",                       :default => 0
+    t.integer  "jpeg2000",                   :default => 0
+    t.integer  "processed",                  :default => 0
+    t.integer  "user_id",    :limit => 8
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "csv_meta_paths", :force => true do |t|
@@ -276,13 +276,13 @@ ActiveRecord::Schema.define(:version => 20120815183838) do
   end
 
   create_table "uploads", :force => true do |t|
-    t.string   "path"
-    t.integer  "pdfa"
-    t.integer  "jpeg2000"
-    t.integer  "processed"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "path",       :limit => 250
+    t.integer  "pdfa",                      :default => 0
+    t.integer  "jpeg2000",                  :default => 0
+    t.integer  "processed",                 :default => 0
+    t.integer  "user_id",    :limit => 8
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
   end
 
   create_table "users", :force => true do |t|
