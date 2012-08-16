@@ -1,5 +1,5 @@
 class WordMetadatas < ActiveRecord::Base
-  belongs_to :file_infos
+  has_one :file_infos
 
   attr_accessible :app_name,
                   :app_version,
