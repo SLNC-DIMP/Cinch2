@@ -68,6 +68,7 @@ gem 'galetahub-simple_captcha', require: 'simple_captcha'   # captcha
 gem "active_attr" # Helps use Active Record without actually creating a table (ie contact form validation)
 gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert images to JPEG2000
 gem 'bagit', require: 'validatable'
+# gem 'natcmp', '~> 1.4.1' # Allows "natural sorting" 1,2,10 instead of 1,10,2
 # convert images to JPEG2000
 #gem 'rmagick', "2.13.1"
 
