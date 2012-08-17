@@ -9,6 +9,9 @@ class DownloadsController < ApplicationController
   end
 
   def create
-
+    @download = FileInfos.create(:file_infos)
+    if @download.save
+      DownloadsWorker.perform_async(@download.id)
+    end
   end
 end

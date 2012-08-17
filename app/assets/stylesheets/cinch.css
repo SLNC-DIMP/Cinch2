@@ -56,7 +56,7 @@ form {
 
 .require { color: red }
 
-.reg_form, .new_upload, .new_crawl {
+.reg_form, .new_upload, .new_crawl, .new_user {
     border: 2px solid #ccc;
     padding: 2%;
     width: 400px;
