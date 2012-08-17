@@ -60,7 +60,7 @@ gem 'paper_trail'      # data auditing
 gem 'devise', '2.1.0'  # user authentication
 gem 'cancan', '1.6.8'   # user roles
 gem 'rails_admin', '0.0.5'  # admin
-gem 'will_paginate', '~> 3.0' # pagination
+# gem 'will_paginate', '~> 3.0' # pagination
 gem 'crummy', '~> 1.6.0'     # breadcrumbs
 gem 'rubyzip'    # zip creation
 gem 'rghost', '~> 0.8.7.8' # convert files to PDF/a
