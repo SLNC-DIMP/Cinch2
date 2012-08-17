@@ -2,8 +2,8 @@ Cinch2::Application.routes.draw do
 
  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  devise_for :users
-
+#  devise_for :users
+  devise_for :users, :controllers => { registrations: "signups"}
   root to: "static_pages#home"
 #  get "static_pages/home"
   match '/about',         to: "static_pages#about"
