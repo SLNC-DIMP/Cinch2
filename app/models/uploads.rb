@@ -10,3 +10,17 @@ class Uploads < ActiveRecord::Base
   validates_integrity_of :path
   validates_processing_of :path
 end
+# == Schema Information
+#
+# Table name: uploads
+#
+#  id         :integer(4)      not null, primary key
+#  path       :string(250)
+#  pdfa       :integer(4)      default(0)
+#  jpeg2000   :integer(4)      default(0)
+#  processed  :integer(4)      default(0)
+#  user_id    :integer(8)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
