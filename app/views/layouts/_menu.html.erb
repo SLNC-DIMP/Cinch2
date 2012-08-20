@@ -18,6 +18,9 @@
               <li><%= link_to "Crawl Url", crawl_path  %></li>
               <li><%= link_to "Crawl Results", crawl_results_path  %></li>
               <li><%= link_to "Download your Files", download_path  %></li>
+              <% #if can? :manage, rails_admin %>
+                  <li><%= link_to "Admin", '/admin'  %></li>
+              <% #end %>
               <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <% else %>
               <li>
