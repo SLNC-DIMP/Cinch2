@@ -2,9 +2,9 @@ class DownloadsController < ApplicationController
   before_filter :authenticate_user!
   load_and_authorize_resource
 
-  include FileType
-  include DirCreation
-  include CurlDownloads
+#  include FileType
+#  include DirCreation
+#  include CurlDownloads
 
   def index
   end

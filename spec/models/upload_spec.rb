@@ -35,4 +35,5 @@ describe Uploads do
   describe "is valid with a valid text file to uploads" do
     it { should be_valid }
   end
+
 end

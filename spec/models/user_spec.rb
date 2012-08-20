@@ -2,7 +2,15 @@ require 'spec_helper'
 require 'cancan/matchers'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "abilities" do
+    subject { ability }
+    let(:ability){ Ability.new(user) }
+
+    context "when is user is authenticated" do
+      let(:user) {Factory(:authenticated)}
+      it{ should be_able_to(:create, Uploads.new) }
+    end
+  end
 end
 # == Schema Information
 #

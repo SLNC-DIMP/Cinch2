@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe EventList do
+describe EventLists do
   pending "add some examples to (or delete) #{__FILE__}"
 end
 # == Schema Information

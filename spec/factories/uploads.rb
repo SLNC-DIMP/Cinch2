@@ -7,6 +7,7 @@ FactoryGirl.define do
     jpeg2000 1
     processed "NULL"
     user_id 1
+
  #   logo { File.open(File.join(Rails.root, 'spec', 'support', 'brands', 'logos', 'logo_image.jpg')) }
   end
 end
