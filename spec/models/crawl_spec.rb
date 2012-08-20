@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'cancan/matchers'
 
 describe Crawl do
   before do
