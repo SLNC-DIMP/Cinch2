@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   ROLES = %w[admin authenticated]
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :username
   # attr_accessible :title, :body
 end
 # == Schema Information

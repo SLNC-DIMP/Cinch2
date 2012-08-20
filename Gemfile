@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.7'
+gem 'rails', '3.2.8'
 
 group :development, :test do
   gem 'rspec-rails', '~>2.11.0'
   gem 'guard-rspec', '~> 0.7.2'
   gem "fakefs", :require => "fakefs/safe"
-  gem 'factory_girl_rails', '~> 3.2.0'
+  gem 'factory_girl_rails', '~> 4.0.0'
 end
 
 group :development do
@@ -49,7 +49,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'amqp', '0.8.0'
 #gem 'parallel'
 #gem 'delayed_job_active_record', '~> 0.3.0'
-gem 'sidekiq'
+gem 'sidekiq', '~> 2.1.1'
+gem 'clockwork', '~> 0.4.1'
 gem 'sinatra', require: false
 gem 'slim'
 
@@ -70,8 +71,6 @@ gem 'active_attr' # Helps use Active Record without actually creating a table (i
 gem 'mini_magick', '3.4'  # wrapper for imagemagick command line.  Convert images to JPEG2000
 gem 'bagit', require: 'validatable'
 # gem 'natcmp', '~> 1.4.1' # Allows "natural sorting" 1,2,10 instead of 1,10,2
-# convert images to JPEG2000
-#gem 'rmagick', "2.13.1"
 
 group :test do
   gem 'capybara', '1.1.2'
