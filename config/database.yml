@@ -5,7 +5,6 @@
 #   gem 'sqlite3'
 # up worker pool to 25 for sidekiq integration
 development:
-  development:
     adapter: sqlite3
     database: db/development.sqlite3
     pool: 25
