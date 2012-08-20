@@ -12,6 +12,7 @@ end
 group :development do
   gem 'annotate', '~> 2.4.1.beta'
   gem 'mysql2', '~> 0.3.10'
+  # gem 'sqlite3', '1.3.6'
 end
 
 # Gems used only for assets and not required
