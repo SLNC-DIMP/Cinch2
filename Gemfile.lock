@@ -291,7 +291,7 @@ DEPENDENCIES
   cancan (= 1.6.8)
   capybara (= 1.1.2)
   carrierwave
-  clockwork
+  clockwork (~> 0.4.1)
   coffee-rails (= 3.2.2)
   crummy (~> 1.6.0)
   curb (= 0.8.1)
@@ -316,7 +316,7 @@ DEPENDENCIES
   rubyzip
   sass-rails (= 3.2.4)
   shoulda-matchers
-  sidekiq
+  sidekiq (~> 2.1.1)
   sinatra
   slim
   sqlite3 (= 1.3.6)

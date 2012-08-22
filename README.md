@@ -48,7 +48,7 @@ Requirements
 
 * Currently Cinch2 will only run on *nix systems
 * Ruby 1.9.3+
-* Rails 3.2.* (We use 3.2.7)
+* Rails 3.2.* (We use 3.2.8)
 * MySQL or SQLite3
 * ClamAV
 * Redis
