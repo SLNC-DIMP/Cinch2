@@ -1,5 +1,6 @@
 class Upload < ActiveRecord::Base
   has_one :user
+  has_many :files_for_downloads
   has_many :url_listings
 
   attr_accessible :path, :path_cache, :pdfa, :jpeg2000, :processed, :user_id
