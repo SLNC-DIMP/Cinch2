@@ -14,7 +14,7 @@ describe User do
 
     context "when is user is authenticated" do
     #  let(:user) {Factory(:authenticated)}
-      it{ should be_able_to(:create, Uploads.new) }
+      it{ should be_able_to(:create, Upload.new) }
     end
   end
 end

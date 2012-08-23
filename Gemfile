@@ -54,7 +54,7 @@ gem 'clockwork', '~> 0.4.1'
 gem 'sinatra', require: false
 gem 'slim'
 
-gem 'carrierwave' # file Uploads
+gem 'carrierwave' # file uploads
 gem 'curb', '0.8.1'     # curl integration
 gem 'anemone', '0.7.2'  # web crawling integration
 gem 'treat', '1.1.2'    # NLP integration

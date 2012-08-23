@@ -11,9 +11,9 @@ class Ability
       can :dashboard
       can :manage, :all
     elsif user.role? :authenticated
-      can :manage, Uploads, :user_id => user.id
+      can :manage, Upload, :user_id => user.id
       can :manage, ZipGzDownloads, :user_id => user.id
-      cannot :destroy, Uploads
+      cannot :destroy, Upload
       cannot :destroy, ZipGzDownloads
 
     else

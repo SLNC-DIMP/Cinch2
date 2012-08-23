@@ -1,4 +1,4 @@
-class Uploads < ActiveRecord::Base
+class Upload < ActiveRecord::Base
   has_one :user
   has_many :url_listings
 

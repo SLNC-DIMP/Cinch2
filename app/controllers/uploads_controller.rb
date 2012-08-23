@@ -3,21 +3,21 @@ class UploadsController < ApplicationController
   load_and_authorize_resource
 
   def new
- #   @uploads = Uploads.new
+    @upload = Upload.new
   end
   
   def create
-  #  @uploads = Uploads.new(params[:uploads])
+    @upload = Upload.new(params[:upload])
 
-    if @uploads.valid?
-      @uploads.pdfa=params[:pdfa]
-      @uploads.jpeg2000=params[:jpeg2000]
-      @uploads.user_id=current_user.id
+    if @upload.valid?
+      @upload.pdfa=params[:pdfa]
+      @upload.jpeg2000=params[:jpeg2000]
+      @upload.user_id=current_user.id
 
-      @uploads.save!
+      @upload.save!
 
       flash[:success] = "Your file was successfully uploaded!"
-      redirect_to uploads_path
+      redirect_to upload_path
     else
       render :new
     end

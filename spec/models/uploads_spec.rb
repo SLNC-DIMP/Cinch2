@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'cancan/matchers'
 
-describe Uploads do
+describe Upload do
   before do
     @uploads = FactoryGirl.create(:uploads)
   end
