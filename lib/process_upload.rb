@@ -1,8 +1,8 @@
 module ProcessUpload
   # Extract links from the file
   def read_file(file_path)
-    lines = []
     if File.exists?(file_path)
+      lines = []
       fh = File.open(file_path)
       fh.each_line { |l|
         lines << l unless line_empty(l)
@@ -32,6 +32,6 @@ module ProcessUpload
   # TODO rails blank? may work here too.
   # http://stackoverflow.com/questions/7339292/ruby-remove-empty-lines-from-string?lq=1
   def line_empty(line)
-    /^$\n/.match(line)
+    /^\s*$\n?/.match(line)
   end
 end

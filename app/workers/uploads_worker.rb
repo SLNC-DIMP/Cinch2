@@ -1,15 +1,13 @@
-class DownloadsWorker
+class UploadsWorker
   include Sidekiq::Worker
   include ProcessUpload
 
+  # @param [Object] file
   def perform(file_path)
-    url_count = count_links(file_path)
-    urls = read_file(file_path)
+    links = read_file(file_path)
 
-    urls.each do |link|
-      if valid_link?(link)
-        FilesForDownload.save
-      end
+    links.each do |f|
+      FilesForDownloads.create(url: f.chomp, user_id: 1)
     end
   end
 end

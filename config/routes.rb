@@ -2,7 +2,9 @@ require 'sidekiq/web'
 
 Cinch2::Application.routes.draw do
 
- mount Sidekiq::Web, at: '/sidekiq'
+
+ mount Sidekiq::Web => '/sidekiq'
+
  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
 #  devise_for :users
