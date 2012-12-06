@@ -57,6 +57,8 @@ GEM
       activesupport (>= 3.2.0)
     childprocess (0.3.3)
       ffi (~> 1.0.6)
+    clockwork (0.4.1)
+      tzinfo
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -272,6 +274,7 @@ DEPENDENCIES
   cancan (= 1.6.8)
   capybara (= 1.1.2)
   carrierwave
+  clockwork (~> 0.4.1)
   coffee-rails (= 3.2.2)
   crummy (~> 1.6.0)
   curb (= 0.8.1)

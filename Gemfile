@@ -50,10 +50,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 #gem 'parallel'
 gem 'delayed_job_active_record', '~> 0.3.0'
 #gem 'sidekiq', '~> 2.1.1'
-#gem 'clockwork', '~> 0.4.1'
+gem 'clockwork', '~> 0.4.1'
 #gem 'sinatra', require: false
 #gem 'slim'
 gem 'daemons'
+
 
 gem 'carrierwave' # file uploads
 gem 'curb', '0.8.1'     # curl integration

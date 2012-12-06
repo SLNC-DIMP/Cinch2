@@ -1,7 +1,9 @@
 class FilesForDownloads < ActiveRecord::Base
+  include ProcessUpload
   belongs_to :file_infos
 
   attr_accessible :processed, :url, :user_id, :user_uploads_id
+
 end
 # == Schema Information
 #
